@@ -42,7 +42,7 @@ define([
 
 			// Test if a node or its ancestor has been marked with the dojoClick property to indicate special processing
 			for(var node = e.target; node; node = node.parentNode){
-				if(node.dojoClick){ return true; }
+                if(node.dojoClick && !node.contentEditable){ return true; }
 			}
 		}
 	}
